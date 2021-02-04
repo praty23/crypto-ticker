@@ -1,0 +1,48 @@
+<template>
+    <lightning-card>
+        <h1 slot="title" if:true={showHeader}>
+            Top {topN} Cryptocurrencies By Market Cap
+        </h1>
+        <div slot="actions" if:true={showHeader}>
+            <lightning-button variant="brand" title="Refresh Ticker" label="Get Latest Prices" onclick={getLatestPrices}></lightning-button>
+        </div>
+    <div class="marquee" if:false={error}>
+        <p>
+            <lightning-layout>
+                <template for:each={cryptoList} for:item="crypto">
+                    <lightning-layout-item padding="around-small" key={crypto.Id}>
+                        <lightning-card>
+                            <h2 slot="title">
+                                <span class="slds-var-p-around_small">
+                                    <lightning-formatted-text value={crypto.Name}></lightning-formatted-text>
+                                </span>
+                                <span class="slds-var-p-around_small">
+                                    <lightning-formatted-number value={crypto.Price} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                                </span>
+                                <span class="slds-var-p-around_small">
+                                    <lightning-icon icon-name={crypto.Change} class={crypto.ColorChange} size="small"></lightning-icon>
+                                    <span class={crypto.ColorChange}>
+                                        <lightning-formatted-number value={crypto.PercentChange} format-style="percent-fixed" maximum-fraction-digits="2"></lightning-formatted-number>
+                                    </span>
+                                </span>
+                            </h2>
+                        </lightning-card>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </p>
+    </div>
+
+    <!-- <template if:false={error}>
+        <lightning-datatable
+            columns={columns}
+            key-field="id"
+            data={cryptoList}>
+        </lightning-datatable>
+    </template> -->
+    <template if:true={error}>
+        {error}
+    </template>
+</lightning-card>
+
+</template>

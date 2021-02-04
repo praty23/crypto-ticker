@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__UtilityBar</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage, lightning__UtilityBar, lightning__AppPage">
+            <property name="showHeader" type="boolean" label="Show Header" default="true" />
+            <!-- <property name="headerTitle" type="String" default="Top {topN} Cryptocurrencies By Market Cap" label="Header Title" /> -->
+            <property name="autoRefresh" type="boolean" label="Auto Refresh" default="false" />
+            <property name="refreshRate" type="Integer" min="5" default="5" description="Refreshes the prices after specified minutes" label="Auto Refresh Rate in mins" />
+            <!-- <property name="cryptoType" type="String" datasource="Top Cryptocurrencies, Custom Favorites" default="Top Cryptocurrencies" label="Ticker Symbols" required="true" /> -->
+            <property name="topN" type="Integer" min="1" default="10" description="Get top N crypto prices by market cap" label="Number Of Top Cryptocurrencies by Market Cap" />
+            <!-- <property name="favoriteCrypto" type="String" placeholder="BTC,ETH,LTC,XRP,BCH" default="BTC,ETH,LTC,XRP,BCH" description="Comma Separated Cryptocurrencies Codes/Symbols" label="Favorite Cryptocurrencies" /> -->
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
