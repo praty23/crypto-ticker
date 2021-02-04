@@ -11,7 +11,11 @@ Please Note:
 - This is built just for fun and please do not make any decision to buy/sell any cryptocurrencies based on the prices shown by this app. Also, the prices may be inaccurate.
 - Please use the auto refresh functionality with CAUTION, as the CMC fier tier API has a daily linit of only 333 calls.
 
+### Crypto Ticker on Contact Record Page
+
 ![Crypto Ticker on Contact Record Page](images/ticker_appPage.png)
+
+### Crypto Ticker in App Utility Bar
 
 ![Crypto Ticker in App Utility Bar](images/ticker_utilityBar.png)
 

@@ -29,14 +29,16 @@ public with sharing class CryptoTicker {
             try{
                 HttpResponse res = http.send(req);
                 if(res.getStatusCode()==200){
-                    system.debug(res.getBody());
-                    system.debug(JSON.deserializeUntyped(res.getBody()));
+                    // system.debug(res.getBody());
+                    // system.debug(JSON.deserializeUntyped(res.getBody()));
                     //system.debug(CryptoParser.parse(res.getBody()));
-                    FieldCreator.CryptoParser cp = CryptoParser.parse(res.getBody());
-                    system.debug('data=='+cp.data);
-                    for(FieldCreator.CryptoParser.Data data: cp.data){
-                        system.debug('===Crypto Top Names===');
-                        system.debug('Name:' + data.name + ' Price: $' + data.quote.usd.price);
+                    // FieldCreator.CryptoParser cp = CryptoParser.parse(res.getBody());
+                    CryptoParser cp = CryptoParser.parse(res.getBody());
+                    // system.debug('data=='+cp.data);
+                    // for(FieldCreator.CryptoParser.Data data: cp.data){
+                    for(CryptoParser.Data data: cp.data){
+                        // system.debug('===Crypto Top Names===');
+                        // system.debug('Name:' + data.name + ' Price: $' + data.quote.usd.price);
                     }
                     return cp.data;
                 } else {
