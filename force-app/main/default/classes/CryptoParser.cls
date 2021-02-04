@@ -1,4 +1,9 @@
 public with sharing class CryptoParser {
+    /***************************************
+     * Generated using JSON2Apex utility
+     * Please ensure to annotate the variables 
+     * as @AuraEnabled to use them in your component
+     **************************************/
     public CryptoParser() {
 
     }

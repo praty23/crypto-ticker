@@ -6,7 +6,9 @@
 
 Crypto Ticker is developed for fun, keeping tab of latest crazy crypto prices while working within Salesforce. The prices are loaded only once by default but can be customized to either fetch the latest prices at will by clicking the button or at a fixed time interval by configuring the component's Refresh Rate attribute. It is built using Lightning Web Component, which can be placed either on an App Page, Record Page or at my favorite place for a quick glance - Utility Bar of any App. It uses Coinmarketcap (CMC) free tier API's.
 
-Please Note:
+![Crypto Ticker Demo](images/ticker_demo.gif)
+
+### Please Note:
 
 - This is built just for fun and please do not make any decision to buy/sell any cryptocurrencies based on the prices shown by this app. Also, the prices may be inaccurate.
 - Please use the auto refresh functionality with CAUTION, as the CMC fier tier API has a daily linit of only 333 calls.
@@ -40,6 +42,7 @@ Please Note:
 ### Third-party Code
 
 - Used [JSON2Apex](http://json2apex.herokuapp.com/) utility to generate the parser class.
+- Used [Deploy2Salesforce](https://andyinthecloud.com/category/githubsfdeploy/) utility for the readme fiel.
 
 ## License
 

@@ -57,7 +57,7 @@ export default class CryptoTicker extends LightningElement {
     }
 
     connectedCallback(){
-        console.log('rconnectedCallback==', this.cryptoList, this.autoRefresh);
+        // console.log('rconnectedCallback==', this.cryptoList, this.autoRefresh);
     }
 
     refreshTicker(){
@@ -71,9 +71,6 @@ export default class CryptoTicker extends LightningElement {
     }
 
     getLatestPrices(){
-        console.log('inside refresh');
-        console.log('intervalId==', this.intervalId);
-
         refreshApex(this.returnedCrypto);
     }
     

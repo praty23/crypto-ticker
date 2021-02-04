@@ -32,14 +32,6 @@
             </lightning-layout>
         </p>
     </div>
-
-    <!-- <template if:false={error}>
-        <lightning-datatable
-            columns={columns}
-            key-field="id"
-            data={cryptoList}>
-        </lightning-datatable>
-    </template> -->
     <template if:true={error}>
         {error}
     </template>
